@@ -140,7 +140,11 @@ header .icon img {
 .top-banner .content {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 20px; 
+  background-image: url("images/bg.png");
+  padding: 30px;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 .top-banner h2 {
   font-size: 48px;
@@ -314,7 +318,9 @@ header .icon img {
   justify-content: space-between;
   flex-direction: row;
 }
-
+.careers .location {
+  text-align: right;
+}
 /* Logos section styles */
 .logos {
   padding-block: 90px;
