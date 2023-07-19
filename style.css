@@ -96,7 +96,7 @@ header {
 header #navbar {
   gap: 30px;
 }
-.logo {
+header .logo {
   display: flex;
   font-size: 45px;
   font-weight: 700;
@@ -104,7 +104,7 @@ header #navbar {
   gap: 10px;
   color: var(--title-color);
 }
-.logo img {
+header .logo img {
   flex-basis: 80px;
 }
 header .follow-buttons {
@@ -306,6 +306,34 @@ header .icon img {
   justify-content: space-between;
   flex-direction: row;
 }
+
+/* Logos section styles */
+.logos {
+  padding-block: 90px;
+}
+.logos .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  flex-direction: row;
+}
+.logos .logo {
+  padding: 5px 15px 0 10px;
+  border: 1px solid;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logos .logo .icon img {
+  width: 30px;
+}
+.logos .logo .text {
+  font-size: 16px;
+  line-height: 1;
+}
+
 /* medium screen CSS */
 @media screen and (min-width: 576px ) {
   .container {
