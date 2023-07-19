@@ -26,8 +26,11 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   color: var(--title-color);
 }
+main {
+  padding-block: 30px;
+}
 section {
-  padding-block: 60px;
+  padding-block: 40px;
 }
 .container {
   max-width: 1200px;
@@ -66,8 +69,9 @@ section {
   font-size: 16px;
   font-weight: 400;
   text-transform: uppercase;
-  padding: 20px 40px;
+  padding: 16px 40px;
   border-radius: 40px;
+  display: inline-block;
 }
 .button-primary {
   color: #ffffff;
@@ -78,7 +82,7 @@ section {
   background: var(--secondary-color);
 }
 .section-title {
-  font-size: 40px;
+  font-size: 28px;
 }
 /* Header Styles */
 header {
@@ -167,6 +171,71 @@ header .icon img {
 .about .quote {
   font-size: 24px;
   font-weight: 700;
+}
+
+/* game gallery section styles */
+.game-gallery {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.game-gallery .gallery {
+  gap: 30px;
+  padding-top: 40px;
+  flex-wrap: wrap;
+  flex-direction: initial;
+  justify-content: center;
+  align-items: flex-start;
+}
+.game-gallery .gallery-item {
+  width: 275px;
+}
+.game-gallery .gallery-item .image {
+  width: 100%;
+  aspect-ratio: 3/4;
+  border: 1px solid;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5) url("images/gallery1.png");
+  background-size: cover;
+  transition: 0.5s;
+}
+.game-gallery .gallery-item .image:hover {
+  background-blend-mode: darken;
+}
+
+.game-gallery .gallery-item:nth-child(2) .image {
+  background-image: url("images/gallery2.png");
+}
+.game-gallery .gallery-item:nth-child(3) .image {
+  background-image: url("images/gallery3.png");
+}
+.game-gallery .gallery-item:nth-child(4) .image {
+  background-image: url("images/gallery4.png");
+}
+.game-gallery .gallery-item .icon {
+  width: 36px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+.game-gallery .gallery-item .text {
+  color: var(--primary-color);
+  padding-top: 15px;
+}
+.game-gallery .gallery-item .icon,
+.game-gallery .gallery-item .text {
+  visibility: hidden;
+}
+.game-gallery .gallery-item:hover .icon,
+.game-gallery .gallery-item:hover .text {
+  visibility: visible;
+}
+.game-gallery .gallery-item .description {
+  text-align: left;
+  padding-top: 10px;
 }
 
 /* medium screen CSS */
