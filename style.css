@@ -19,6 +19,9 @@ a {
   text-decoration: none;
   color: inherit;
 }
+p {
+  line-height: 1.4;
+}
 img {
   max-width: 100%;
 }
@@ -72,6 +75,8 @@ section {
   padding: 16px 40px;
   border-radius: 40px;
   display: inline-block;
+  color: var(--primary-color);
+  background: #ffffff;
 }
 .button-primary {
   color: #ffffff;
@@ -193,7 +198,6 @@ header .icon img {
 .game-gallery .gallery-item .image {
   width: 100%;
   aspect-ratio: 3/4;
-  border: 1px solid;
   border-radius: 8px;
   display: flex;
   flex-direction: column;
@@ -238,6 +242,70 @@ header .icon img {
   padding-top: 10px;
 }
 
+/* Promotion sections styles */
+.promotion-add {
+  --bottom: 70px;
+  --left: max(50px, 15%);
+  text-align: center;
+  gap: 30px;
+}
+.promotion-add h2 {
+  margin-bottom: 20px;
+}
+.promotion-add .image {
+  position: relative;
+  width: min(600px, 100%);
+  margin-bottom: var(--bottom);
+}
+.promotion-add .big-img {
+  width: calc(100% - var(--left));
+  margin-left: var(--left);
+}
+.promotion-add .small-img {
+  position: absolute;
+  width: max(200px, 40%);
+  left: 0;
+  bottom: calc(var(--bottom) * -1);
+}
+.promotion-add.two .big-img {
+  width: calc(100% - var(--left));
+  margin-right: var(--left);
+  margin-left: 0;
+}
+.promotion-add.two .small-img {
+  right: 0;
+  left: auto;
+}
+
+/* footer careers section styles */
+.careers {
+  background: var(--primary-color);
+  color: #ffffff;
+  padding-block: 90px;
+}
+.careers .container {
+  gap: 30px;
+}
+.careers .content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: flex-start;
+}
+.careers h2 {
+  color: #ffffff;
+}
+.careers .list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.careers .list .item {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
 /* medium screen CSS */
 @media screen and (min-width: 576px ) {
   .container {
