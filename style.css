@@ -118,7 +118,7 @@ header .follow-buttons {
   display: flex;
   gap: 10px;
   background: rgba(11, 2, 35, 0.10);
-  padding: 10px 25px;
+  padding: 5px 25px;
   border-radius: 5px;
   align-items: center;
   max-width: 300px;
@@ -212,9 +212,11 @@ header .icon img {
   background: rgba(0, 0, 0, 0.5) url("images/gallery1.png");
   background-size: cover;
   transition: 0.5s;
+  border: 3px solid transparent;
 }
 .game-gallery .gallery-item .image:hover {
   background-blend-mode: darken;
+  border-color: var(--primary-color);
 }
 
 .game-gallery .gallery-item:nth-child(2) .image {
@@ -326,18 +328,24 @@ header .icon img {
 }
 .logos .logo {
   padding: 5px 15px 0 10px;
-  border: 1px solid;
   border-radius: 30px;
+  border: 2px solid transparent;
   display: flex;
   align-items: center;
   gap: 10px;
 }
+.logos .logo:hover {
+  border-color: var(--primary-color);
+  cursor: pointer;
+  color: var(--primary-color);
+} 
 .logos .logo .icon img {
   width: 30px;
 }
 .logos .logo .text {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1;
+  font-weight: 600;
 }
 
 /* main footer styles */
@@ -385,14 +393,14 @@ header .icon img {
 
 /* medium screen CSS */
 @media screen and (min-width: 576px ) {
-  .container {
-    padding-inline: 0;
-  }
 
 }
 
 /* large screen CSS */
 @media screen and (min-width: 992px) {
+  .container {
+    padding-inline: 0;
+  }
   .flex {
     flex-direction: row; 
     justify-content: space-between;
