@@ -194,6 +194,9 @@ header .icon img {
   flex-direction: column;
   text-align: center;
 }
+.game-gallery p {
+  padding-inline: 25px;
+}
 .game-gallery .gallery {
   gap: 30px;
   padding-top: 40px;
@@ -216,7 +219,7 @@ header .icon img {
   background: rgba(0, 0, 0, 0.5) url("images/gallery1.png");
   background-size: cover;
   transition: 0.5s;
-  border: 3px solid transparent;
+  border: 3px solid #f7f7f7;
 }
 .game-gallery .gallery-item .image:hover {
   background-blend-mode: darken;
@@ -333,7 +336,7 @@ header .icon img {
   flex-direction: row;
 }
 .logos .logo {
-  padding: 5px 15px 0 10px;
+  padding: 10px 15px 10px 10px;
   border-radius: 30px;
   border: 2px solid transparent;
   display: flex;
@@ -427,6 +430,9 @@ header .icon img {
   }
   #main-content {
     background: #f7f7f7;
+  }
+  .game-gallery p {
+    padding-inline: 0;
   }
   .top-banner > div,
   .about > div,
