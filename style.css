@@ -118,9 +118,10 @@ header .follow-buttons {
   display: flex;
   gap: 10px;
   background: rgba(11, 2, 35, 0.10);
-  padding: 17px 25px;
+  padding: 10px 25px;
   border-radius: 5px;
   align-items: center;
+  max-width: 300px;
 }
 
 header .icon img {
@@ -387,9 +388,66 @@ header .icon img {
   .container {
     padding-inline: 0;
   }
+
 }
 
 /* large screen CSS */
 @media screen and (min-width: 992px) {
-  
+  .flex {
+    flex-direction: row; 
+    justify-content: space-between;
+    align-items: center;
+  }
+  .flex.rev {
+    flex-direction: row-reverse;
+  }
+  .section-title {
+    font-size: 48px;
+  }
+  header #navbar {
+    justify-content: space-between;
+  }
+  #main-menu {
+    flex-direction: row;
+    justify-items: flex-end;
+  }
+  #main-content {
+    background: #f7f7f7;
+  }
+  .top-banner > div,
+  .about > div,
+  .promotion-add > div,
+  .careers .container > div {
+    flex-basis: 50%;
+  }
+  .about .content,
+  .promotion-add .content {
+    text-align: right;
+  }
+  .promotion-add.two .content {
+    text-align: left;
+  }
+  .promotion-add .content {
+    padding: 85px;
+  }
+  .careers .image {
+    visibility: hidden;
+  }
+  .careers {
+    background-image: url("images/careers.png");
+    background-repeat: no-repeat;
+    background-size: 600px 100%;
+    background-position: top right;
+  }
+  .main-footer .social-icons {
+    flex-wrap: nowrap;
+    gap: 40px;
+    width: auto;
+    padding-block: 40px;
+  }
+  .copyright br {
+    display: none;
+  }
+
+
 }
