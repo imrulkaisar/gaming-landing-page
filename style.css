@@ -30,7 +30,7 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--title-color);
 }
 main {
-  padding-block: 30px;
+  padding-block-end: 30px;
 }
 section {
   padding-block: 40px;
@@ -136,17 +136,13 @@ header .icon img {
 }
 
 /* Banner section styles */
-.top-banner {
+.top-banner .container {
   row-gap: 40px;
 }
 .top-banner .content {
   display: flex;
   flex-direction: column;
   gap: 20px; 
-  background-image: url("images/bg.png");
-  padding: 30px;
-  background-size: contain;
-  background-repeat: no-repeat;
 }
 .top-banner h2 {
   font-size: 48px;
@@ -174,6 +170,7 @@ header .icon img {
 .top-banner .buttons {
   display: flex;
   gap: 10px;
+  flex-wrap: wrap;
 }
 
 /* about section styles */
@@ -184,6 +181,13 @@ header .icon img {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  align-items: center;
+}
+.about .content p {
+  max-width: 450px;
+}
+.about .quote-title {
+  font-size: 20px;
 }
 .about .quote {
   font-size: 24px;
@@ -196,9 +200,6 @@ header .icon img {
   flex-direction: column;
   text-align: center;
 }
-.game-gallery p {
-  padding-inline: 25px;
-}
 .game-gallery .gallery {
   gap: 30px;
   padding-top: 40px;
@@ -208,18 +209,19 @@ header .icon img {
   align-items: flex-start;
 }
 .game-gallery .gallery-item {
-  width: 275px;
+  width: 300px;
 }
 .game-gallery .gallery-item .image {
   width: 100%;
-  aspect-ratio: 3/4;
-  border-radius: 8px;
+  aspect-ratio: 3.2/4;
+  border-radius: 12px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background: rgba(0, 0, 0, 0.5) url("images/gallery1.png");
   background-size: cover;
+  background-position: center;
   transition: 0.5s;
   border: 3px solid #f7f7f7;
 }
@@ -255,7 +257,6 @@ header .icon img {
   visibility: visible;
 }
 .game-gallery .gallery-item .description {
-  text-align: left;
   padding-top: 10px;
 }
 
@@ -264,6 +265,8 @@ header .icon img {
   --bottom: 70px;
   --left: max(50px, 15%);
   text-align: center;
+}
+.promotion-add .container{
   gap: 30px;
 }
 .promotion-add h2 {
@@ -298,7 +301,6 @@ header .icon img {
 .careers {
   background: var(--primary-color);
   color: #ffffff;
-  padding-block: 90px;
 }
 .careers .container {
   gap: 30px;
@@ -404,7 +406,9 @@ header .icon img {
 
 /* medium screen CSS */
 @media screen and (min-width: 576px ) {
-
+  .main-footer .container{
+    max-width: 425px;
+  }
 }
 
 /* large screen CSS */
@@ -436,12 +440,28 @@ header .icon img {
   #main-content {
     background: #f7f7f7;
   }
+  .top-banner {
+    background: url("images/bg.png");
+    background-repeat: no-repeat;
+  }
+  .about {
+    background-color: rgba(255, 66, 165, 0.03);
+  }
+  .about .content{
+    align-items: flex-end;
+  }
   .game-gallery p {
     padding-inline: 0;
   }
-  .top-banner > div,
-  .about > div,
-  .promotion-add > div,
+  .game-gallery .gallery-item {
+    width: 275px;
+  }
+  .game-gallery .gallery-item .description {
+    text-align: left;
+  }
+  .top-banner .container > div,
+  .about .container > div,
+  .promotion-add .container > div,
   .careers .container > div {
     flex-basis: 50%;
   }
@@ -461,7 +481,7 @@ header .icon img {
   .careers {
     background-image: url("images/careers.png");
     background-repeat: no-repeat;
-    background-size: 600px 100%;
+    background-size: min(50%, 800px) 100%;
     background-position: top right;
   }
   .main-footer .social-icons {
