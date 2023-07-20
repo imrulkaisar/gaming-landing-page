@@ -405,7 +405,7 @@ header .icon img {
 }
 
 /* medium screen CSS */
-@media screen and (min-width: 576px ) {
+@media screen and (min-width: 576px ) and (max-width: 991px) {
   .main-footer .container{
     max-width: 425px;
   }
