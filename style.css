@@ -118,12 +118,14 @@ header .follow-buttons {
   display: flex;
   gap: 10px;
   background: rgba(11, 2, 35, 0.10);
-  padding: 5px 25px;
+  padding: 5px 20px;
   border-radius: 5px;
   align-items: center;
   max-width: 300px;
 }
-
+header .social-icons {
+  gap: 0px;
+}
 header .icon img {
   width: 24px;
 }
@@ -421,6 +423,9 @@ header .icon img {
   .section-title {
     font-size: 48px;
   }
+  header {
+    padding-block: 30px;
+  }
   header #navbar {
     justify-content: space-between;
   }
@@ -463,7 +468,7 @@ header .icon img {
     flex-wrap: nowrap;
     gap: 40px;
     width: auto;
-    padding-block: 40px;
+    padding-block: 20px;
   }
   .copyright br {
     display: none;
